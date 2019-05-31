@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/item_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="previous"
+                android:text="@string/previous"
+                android:textColor="#c9050c" />
+
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="forth"
+                android:text="@string/next"
+                android:textColor="#c9050c" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

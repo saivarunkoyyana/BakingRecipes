@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".UI.ItemListActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#000"
+
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="#000"
+            android:onClick="getingredients"
+            android:text="@string/check_ingredients"
+            android:textColor="#c9050c"
+            android:layout_marginStart="16dp" />
+
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/item_list"
+            android:name="com.example.acer.bakingrecipes.ItemListFragment"
+            android:layout_width="@dimen/item_width"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#000"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:context="com.example.acer.bakingrecipes.UI.ItemListActivity"
+            tools:listitem="@layout/item_list_content" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/item_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="#000" />
+
+</LinearLayout>
